@@ -1,0 +1,41 @@
+{
+  "name": "indicator-growth-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "IGE - consented lead capture, TradingView invite-only access queue, CRM adapter and CPQL reporting",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "db:migrate": "tsx scripts/migrate.ts up",
+    "db:rollback": "tsx scripts/migrate.ts down",
+    "db:seed": "tsx scripts/seed.ts",
+    "admin:create": "tsx scripts/create-admin.ts",
+    "jobs:meta": "tsx scripts/run-jobs.ts meta",
+    "jobs:retention": "tsx scripts/run-jobs.ts retention",
+    "keys:generate": "tsx scripts/generate-keys.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "next": "^15.5.29",
+    "pg": "^8.16.3",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  }
+}
